@@ -36,15 +36,15 @@ const doImport = process.argv.includes('--import') || process.env.FULL_IMPORT ==
 async function importData() {
   try {
     const formattedData = records.map(item => ({
-      cuisine: item.cuisine,
-      title: item.title,
+      cuisine:item.cuisine,
+      title:item.title,
       rating: parseNumber(item.rating),
-      prep_time: parseNumber(item.prep_time),
-      cook_time: parseNumber(item.cook_time),
-      total_time: parseNumber(item.total_time),
-      description: item.description,
-      nutrients: item.nutrients,
-      serves: item.serves
+      prep_time:parseNumber(item.prep_time),
+      cook_time:parseNumber(item.cook_time),
+      total_time:parseNumber(item.total_time),
+      description:item.description,
+      nutrients:item.nutrients,
+      serves:item.serves
     }));
     if (doImport) {
       await Recipe.insertMany(formattedData);

@@ -1,8 +1,6 @@
 import React from "react";
 import { Table, Rate, Empty } from "antd";
-
 const RecipeTable = ({ recipes, loading, onRowClick, pagination, onChange }) => {
-
   const columns = [
     {
       title: "Title",
@@ -35,7 +33,6 @@ const RecipeTable = ({ recipes, loading, onRowClick, pagination, onChange }) => 
       key: "serves"
     }
   ];
-
   return (
     <Table
       columns={columns}
@@ -53,5 +50,4 @@ const RecipeTable = ({ recipes, loading, onRowClick, pagination, onChange }) => 
     />
   );
 };
-
 export default RecipeTable;

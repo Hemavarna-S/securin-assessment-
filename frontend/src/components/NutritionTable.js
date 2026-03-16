@@ -29,7 +29,6 @@ const NutritionTable = ({ nutrients }) => {
       key: "value"
     }
   ];
-
   return (
     <div style={{ marginTop: 20 }}>
       <h3>Nutrition</h3>
